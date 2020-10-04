@@ -7,7 +7,7 @@ class Navbar extends React.Component{
 
 render(){
 return(
-    <div className="Navbar" className="Navbar">
+    <div className="Navbar">
         <ul className="Links">
             <a href = "fr4ct1ons.myportfolio.com"> <img src = {logo} className = "Logo"/></a>
             <li><a href="#">Test2</a></li>

@@ -1,0 +1,63 @@
+<template>
+    <div class="Navbar">
+        <ul class="Links">
+            <a href = "fr4ct1ons.myportfolio.com"><img alt="FR4CT1ONS" src="./assets/Logo final.svg" class="Logo"></a>
+            <li><a href="#">Test2</a></li>
+            <li><a href="#">Test1</a></li>
+        </ul>
+    </div>
+</template>
+
+<script>
+export default {
+    data: function()
+    {
+        return {
+            
+        }
+    }
+}
+</script>
+
+<style>
+.Navbar
+{
+    background-color: rgb(70, 70, 70);
+    overflow: hidden;
+    padding: 14px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.Navbar a
+{
+    color: red;
+}
+
+.Links
+{
+    list-style-type: none;
+    margin: 0;
+    height: 60px;
+    padding: 0;
+    overflow: hidden
+}
+
+.Links li
+{
+    float: right;
+}
+
+.Links li a
+{
+    display: block;
+    margin: 8px;
+    font-size: 200%;
+}
+
+.Logo
+{
+    height: 100%;
+    float: left;
+}
+</style>
