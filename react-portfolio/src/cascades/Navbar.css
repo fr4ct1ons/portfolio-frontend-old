@@ -1,0 +1,43 @@
+.Navbar
+{
+    background-color: rgb(70, 70, 70);
+    overflow: hidden;
+    padding: 14px;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.Navbar a
+{
+    color: red;
+}
+
+.Links
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+
+.Links li
+{
+    float: right;
+}
+
+.Links li a
+{
+    display: block;
+    padding: 8px;
+    font-size: 200%;
+}
+
+.Logo
+{
+    width: 400px;
+    font-size: 200%;
+    float: left;
+}
+/*{float: "left"}
+
+*/
