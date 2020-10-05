@@ -3,7 +3,7 @@
     <Navbar/>
 
     <div style="width: 70%, textAlign: center">
-        <div style="width: 66%, margin: auto, display: block" class="Page">
+        <div class="Page">
           <h1>WHO AM I</h1>
           <h2><i>Introducing who am I, what I work with and my goals</i></h2>
           <p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
@@ -45,6 +45,13 @@ export default {
 body{
   margin: 0%;
   background-color: black;
+}
+
+.Page
+{
+  width: 66%;
+  margin: auto;
+  display: block
 }
 
 .Page h1
