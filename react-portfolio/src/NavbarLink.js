@@ -23,10 +23,9 @@ render(){
 
 
 return(
-    <li><a href={this.props.pageLink} style={{color : newColor}}>{this.props.name}</a></li>
+    <li><a onClick={() => this.props.ChangePage(this.props.index)} href="#" style={{color : newColor}}>{this.props.name}</a></li>
 )
 }
-
 }
 
 export default NavbarLink

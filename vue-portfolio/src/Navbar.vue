@@ -2,10 +2,10 @@
     <div class="Navbar">
         <ul class="Links">
             <a href = "fr4ct1ons.myportfolio.com"><img alt="FR4CT1ONS" src="./assets/Logo final.svg" class="Logo"></a>
-            <NavbarLink name="ART GALLERY" linkType=LinkGallery pageLink = "https://fr4ct1ons.myportfolio.com/work" />
-            <NavbarLink name="WHO AM I" linkType=LinkActive pageLink = "#"></NavbarLink>
-            <NavbarLink name="GAMES" linkType=LinkGallery pageLink = "https://fr4ct1ons.myportfolio.com/full-gallery"></NavbarLink>
-            <NavbarLink name="SOFTWARE" linkType=LinkGallery pageLink = "https://fr4ct1ons.myportfolio.com/software"></NavbarLink>
+            <NavbarLink name="ART GALLERY" index=0 @ChangePage="ChangePage" linkType=LinkGallery pageLink = "https://fr4ct1ons.myportfolio.com/work" />
+            <NavbarLink name="WHO AM I" index=1 @ChangePage="ChangePage" linkType=LinkActive pageLink = "#"></NavbarLink>
+            <NavbarLink name="GAMES" index=2 @ChangePage="ChangePage" linkType=LinkGallery pageLink = "https://fr4ct1ons.myportfolio.com/full-gallery"></NavbarLink>
+            <NavbarLink name="SOFTWARE" index=3 @ChangePage="ChangePage" linkType=LinkGallery pageLink = "https://fr4ct1ons.myportfolio.com/software"></NavbarLink>
 
         </ul>
     </div>
@@ -15,6 +15,10 @@
 import NavbarLink from "./NavbarLink.vue"
 
 export default {
+    created() {
+        this.$emit("pageChangeMethod");
+    },
+    props:["pageChangeMthod"],
     components :
     {
         NavbarLink
@@ -23,6 +27,13 @@ export default {
     {
         return {
             
+        }
+    },
+    methods: {
+        ChangePage(index )
+        {
+            //alert(index)
+            this.$emit("ChangePage", index)
         }
     }
 }

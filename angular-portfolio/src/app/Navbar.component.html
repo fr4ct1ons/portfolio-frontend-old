@@ -44,11 +44,11 @@
 <div class="Navbar">
     <ul class="Links">
         <a href = "fr4ct1ons.myportfolio.com"><img alt="FR4CT1ONS" src="../assets/Logo final.svg" class="Logo"></a>
-        <NavbarLink linkType="LinkGallery" linkName="ART GALLERY" linkHref = "https://fr4ct1ons.myportfolio.com/work"></NavbarLink>
-        <NavbarLink linkType="LinkActive" linkName="WHO AM I" pageLink = "#"></NavbarLink>
+        <NavbarLink linkType="LinkGallery" (OnChangePage)="ChangePage($event)" index="0" linkName="ART GALLERY" linkHref = "https://fr4ct1ons.myportfolio.com/work"></NavbarLink>
+        <NavbarLink linkType="LinkActive" (OnChangePage)="ChangePage($event)" index="1" linkName="WHO AM I" pageLink = "#"></NavbarLink>
 
-        <NavbarLink linkType="LinkGallery" linkName="GAMES" linkHref = "https://fr4ct1ons.myportfolio.com/full-gallery"></NavbarLink>
-        <NavbarLink linkType="LinkGallery" linkName="SOFTWARE" linkHref = "https://fr4ct1ons.myportfolio.com/software"></NavbarLink>
+        <NavbarLink linkType="LinkGallery" (OnChangePage)="ChangePage($event)" index="2" linkName="GAMES" linkHref = "https://fr4ct1ons.myportfolio.com/full-gallery"></NavbarLink>
+        <NavbarLink linkType="LinkGallery" (OnChangePage)="ChangePage($event)" index="3" linkName="SOFTWARE" linkHref = "https://fr4ct1ons.myportfolio.com/software"></NavbarLink>
     </ul>
 </div>
 

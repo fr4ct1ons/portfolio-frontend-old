@@ -3,14 +3,43 @@ import React from 'react';
 import './App.css';
 import Navbar from "./Navbar";
 import Page from "./Page";
+import { render } from 'react-dom';
 
-function App() {
+const pageInfos =
+  [
+    {
+      title: "ART GALLERY", subtitle: "My works of art"
+    },
+    {
+      title: "WHO AM I", subtitle: "Introducing who I am, what I work with and my goals"
+    },
+    {
+      title: "GAMES", subtitle: "Games I worked on"
+    },
+    {
+      title: "SOFTWARE", subtitle: "Software I worked on"
+    }
+  ]
+
+
+class App extends React.Component{
+  
+currentIndex = 1;
+
+ShowPageInfo(index)
+{
+  alert(this.currentIndex);
+  this.currentIndex = index;
+}
+
+render()
+{
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar pageChangeMethod={this.ShowPageInfo}/>
 
       
-          <Page title = "WHO AM I" subtitle = "Introducing who am I, what I work with and my goals"></Page>
+          <Page title = {pageInfos[this.currentIndex].title} subtitle = {pageInfos[this.currentIndex].subtitle}></Page>
         <p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
         <p>I am an aspiring game programmer, artist and designer. Currently, I'm graduating in Information Technology at Universidade Federal do Rio Grande do Norte. 
             Over there, I'm primarily studying game development and design along with software engineering. I am also studying arts as an auto-didact. 
@@ -22,6 +51,7 @@ function App() {
         <p>Right now, the public project I'm giving most of my attention to is Single Fighter. Go check it out! <a href="https://fr4ct1ons.itch.io/single-fighter">https://fr4ct1ons.itch.io/single-fighter</a></p>
     </div>
   );
+}
 }
 
 export default App;

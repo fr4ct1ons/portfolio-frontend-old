@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <Navbar/>
+    <Navbar @ChangePage="ChangePage"/>
 
     <div style="width: 70%, textAlign: center">
         <div class="Page">
-          <Page title="WHO AM I" subtitle="Introducing who I am, what I work with and my goals"/>
+          <Page :title="pageInfos[currentIndex].title" :subtitle="pageInfos[currentIndex].subtitle"/>
           <p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
           <p>I am an aspiring game programmer, artist and designer. Currently, I'm graduating in Information Technology at Universidade Federal do Rio Grande do Norte. 
               Over there, I'm primarily studying game development and design along with software engineering. I am also studying arts as an auto-didact. 
@@ -25,10 +25,39 @@ import Page from "./Page.vue"
 
 export default {
   name: 'App',
+  created()
+  {
+    this.currentIndex = 1;
+  },
   components: {
     Navbar,
     Page
-  }
+  },
+  methods: {
+    ChangePage(index )
+    {
+      this.currentIndex = index;
+      //alert(this.pageInfos[this.currentIndex].title);
+    }
+  },
+  data: () => ({
+    currentIndex : 1,
+    pageInfos: 
+  [
+    {
+      title: "ART GALLERY", subtitle: "My works of art"
+    },
+    {
+      title: "WHO AM I", subtitle: "Introducing who I am, what I work with and my goals"
+    },
+    {
+      title: "GAMES", subtitle: "Games I worked on"
+    },
+    {
+      title: "SOFTWARE", subtitle: "Software I worked on"
+    }
+  ]
+  })
 }
 </script>
 

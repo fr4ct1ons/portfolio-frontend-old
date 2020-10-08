@@ -1,14 +1,24 @@
 <template>
-    <li><a v-bind:href=pageLink v-bind:class=linkType>{{name}}</a></li>
+    <li><a v-on:click="ChangePage(index)" v-bind:class=linkType>{{name}}</a></li>
 </template>
 
+
 <script>
+//v-bind:href=pageLink
 export default {
-    props: ["name", "linkType", "pageLink"],
+    props: ["name", "linkType", "pageLink", "index"],
     data: function()
     {
         return {
             
+        }
+    },
+    methods: 
+    {
+        ChangePage(index )
+        {
+            //alert(index);
+            this.$emit("ChangePage", index)
         }
     }
 }

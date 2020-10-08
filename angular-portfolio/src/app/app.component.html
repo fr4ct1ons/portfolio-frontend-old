@@ -545,11 +545,11 @@ body{
 </style>
 
 <div class="app">
-  <Navbar></Navbar>
+  <Navbar (OnChangePage)="ChangePage($event)"></Navbar>
 
   <div style="textAlign: center">
     <div class="Page">
-      <Page title="WHO AM I" subtitle="Introducing who am I, what I work with and my goals"></Page>
+      <Page [title]="this.pageInfos[currentIndex].title" [subtitle]="this.pageInfos[currentIndex].subtitle"></Page>
       <p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
       <p>I am an aspiring game programmer, artist and designer. Currently, I'm graduating in Information Technology at Universidade Federal do Rio Grande do Norte. 
           Over there, I'm primarily studying game development and design along with software engineering. I am also studying arts as an auto-didact. 
