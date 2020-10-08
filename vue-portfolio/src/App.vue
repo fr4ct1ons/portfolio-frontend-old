@@ -4,8 +4,7 @@
 
     <div style="width: 70%, textAlign: center">
         <div class="Page">
-          <h1>WHO AM I</h1>
-          <h2><i>Introducing who am I, what I work with and my goals</i></h2>
+          <Page title="WHO AM I" subtitle="Introducing who I am, what I work with and my goals"/>
           <p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
           <p>I am an aspiring game programmer, artist and designer. Currently, I'm graduating in Information Technology at Universidade Federal do Rio Grande do Norte. 
               Over there, I'm primarily studying game development and design along with software engineering. I am also studying arts as an auto-didact. 
@@ -22,11 +21,13 @@
 
 <script>
 import Navbar from "./Navbar.vue"
+import Page from "./Page.vue"
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    Page
   }
 }
 </script>

@@ -5,4 +5,6 @@ import {Component} from "@angular/core"
     templateUrl: "./Navbar.component.html"
 })
 
-export class Navbar {}
+export class Navbar {
+    active = "LinkActive";
+}
