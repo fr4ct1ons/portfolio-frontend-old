@@ -1,11 +1,35 @@
 <script>
 	import Navbar from "./Navbar.svelte"
 	import Page from "./Page.svelte"
+
+	let currentIndex = 1;
+  
+  	const pageInfos= 
+  [
+    {
+      title: "ART GALLERY", subtitle: "My works of art"
+    },
+    {
+      title: "WHO AM I", subtitle: "Introducing who I am, what I work with and my goals"
+    },
+    {
+      title: "GAMES", subtitle: "Games I worked on"
+    },
+    {
+      title: "SOFTWARE", subtitle: "Software I worked on"
+    }
+  ]
+
+	function ChangePage(event)
+	{
+		currentIndex = event.detail.index
+		//alert(pageInfos[currentIndex].title);
+	}
 </script>
 
 <main>
-	<Navbar></Navbar>
-	<Page title = "WHO AM I" subtitle="Introducing who I am, what I work with and my goals"></Page>
+	<Navbar on:ChangePage="{ChangePage}"></Navbar>
+	<Page title = {pageInfos[currentIndex].title} subtitle={pageInfos[currentIndex].subtitle}></Page>
 	<div class="PlaceholderPage">
 		<p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
 		<p>I am an aspiring game programmer, artist and designer. Currently, I'm graduating in Information Technology at Universidade Federal do Rio Grande do Norte. 

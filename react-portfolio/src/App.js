@@ -5,31 +5,44 @@ import Navbar from "./Navbar";
 import Page from "./Page";
 import { render } from 'react-dom';
 
-const pageInfos =
-  [
-    {
-      title: "ART GALLERY", subtitle: "My works of art"
-    },
-    {
-      title: "WHO AM I", subtitle: "Introducing who I am, what I work with and my goals"
-    },
-    {
-      title: "GAMES", subtitle: "Games I worked on"
-    },
-    {
-      title: "SOFTWARE", subtitle: "Software I worked on"
-    }
-  ]
-
 
 class App extends React.Component{
   
-currentIndex = 1;
+
+constructor(props)
+{
+  super(props);
+
+  this.state = 
+  {
+    currentIndex: 1,
+
+    pageInfos:
+    [
+      {
+        title: "ART GALLERY", subtitle: "My works of art"
+      },
+      {
+        title: "WHO AM I", subtitle: "Introducing who I am, what I work with and my goals"
+      },
+      {
+        title: "GAMES", subtitle: "Games I worked on"
+      },
+      {
+        title: "SOFTWARE", subtitle: "Software I worked on"
+      }
+    ]
+  };
+
+  this.ShowPageInfo = this.ShowPageInfo.bind(this);
+}
 
 ShowPageInfo(index)
 {
-  alert(this.currentIndex);
-  this.currentIndex = index;
+  
+  this.setState({
+    currentIndex: index
+  });
 }
 
 render()
@@ -39,7 +52,7 @@ render()
       <Navbar pageChangeMethod={this.ShowPageInfo}/>
 
       
-          <Page title = {pageInfos[this.currentIndex].title} subtitle = {pageInfos[this.currentIndex].subtitle}></Page>
+          <Page title = {this.state.pageInfos[this.state.currentIndex].title} subtitle = {this.state.pageInfos[this.state.currentIndex].subtitle}></Page>
         <p>Hey there! My name is Gabriel Lucena, also known as FR4CT1ONS.</p>
         <p>I am an aspiring game programmer, artist and designer. Currently, I'm graduating in Information Technology at Universidade Federal do Rio Grande do Norte. 
             Over there, I'm primarily studying game development and design along with software engineering. I am also studying arts as an auto-didact. 
