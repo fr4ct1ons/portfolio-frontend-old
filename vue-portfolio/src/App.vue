@@ -15,6 +15,7 @@
           <br/>
           <p>Right now, the public project I'm giving most of my attention to is Single Fighter. Go check it out! <a href="https://fr4ct1ons.itch.io/single-fighter">https://fr4ct1ons.itch.io/single-fighter</a></p>
         </div>
+        <ContactForm/>
       </div>
   </div>
 </template>
@@ -22,6 +23,7 @@
 <script>
 import Navbar from "./Navbar.vue"
 import Page from "./Page.vue"
+import ContactForm from "./ContactForm.vue"
 
 export default {
   name: 'App',
@@ -31,7 +33,8 @@ export default {
   },
   components: {
     Navbar,
-    Page
+    Page,
+    ContactForm
   },
   methods: {
     ChangePage(index )
