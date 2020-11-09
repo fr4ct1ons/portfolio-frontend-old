@@ -17,7 +17,7 @@ return(
             <NavbarLink name="WHO AM I" ChangePage={() => this.props.pageChangeMethod(1)} linkType={1} index={1} pageLink = "#"></NavbarLink>
             <NavbarLink name="GAMES" ChangePage={() => this.props.pageChangeMethod(2)} linkType={2} index={2} pageLink = "https://fr4ct1ons.myportfolio.com/full-gallery"></NavbarLink>
             <NavbarLink name="SOFTWARE" ChangePage={() => this.props.pageChangeMethod(3)} linkType={2} index={3} pageLink = "https://fr4ct1ons.myportfolio.com/software"></NavbarLink>
-
+            
         </ul>
     </div>
 )

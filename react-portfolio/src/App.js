@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from "./Navbar";
 import Page from "./Page";
 import { render } from 'react-dom';
+import ContactForm from "./ContactForm"
 
 
 class App extends React.Component{
@@ -62,6 +63,8 @@ render()
         <p>When it comes to arts, I have experience in 2D concept and final art, as well as 3D modelling in general. Currently, I'm studying animation.</p>
         <br/>
         <p>Right now, the public project I'm giving most of my attention to is Single Fighter. Go check it out! <a href="https://fr4ct1ons.itch.io/single-fighter">https://fr4ct1ons.itch.io/single-fighter</a></p>
+    
+        <ContactForm></ContactForm>
     </div>
   );
 }
