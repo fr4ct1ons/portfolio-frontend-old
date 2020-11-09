@@ -30,14 +30,11 @@ export default {
     },
     methods: 
     {
-
         onSubmit()
         {
             const errorEmail = isEmailValid(this.email);
             const errorSubject = isSubjectValid(this.subject);
             const errorMessage = isMessageValid(this.message);
-
-            console.log(this.state);
 
             if(!errorEmail)
                 alert("Please, insert a valid email.")
