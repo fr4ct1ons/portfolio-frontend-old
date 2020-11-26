@@ -1,6 +1,7 @@
 <script>
 	import Navbar from "./Navbar.svelte"
 	import Page from "./Page.svelte"
+	import ContactForm from "./ContactForm.svelte"
 
 	let currentIndex = 1;
   
@@ -41,6 +42,7 @@
 		<br/>
 		<p>Right now, the public project I'm giving most of my attention to is Single Fighter. Go check it out! <a href="https://fr4ct1ons.itch.io/single-fighter">https://fr4ct1ons.itch.io/single-fighter</a></p>
 	</div>
+	<ContactForm></ContactForm>
 </main>
 
 <style>
