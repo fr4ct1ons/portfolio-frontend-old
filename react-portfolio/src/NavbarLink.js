@@ -1,6 +1,7 @@
 import React from 'react';
 //import './App.css';
-import './cascades/Navbar.css';
+import './cascades/NavbarLink.css';
+import {Link} from 'react-router-dom';
 
 class NavbarLink extends React.Component{
 
@@ -22,9 +23,9 @@ render(){
     }
 
 
-return(
-    <li><a onClick={() => this.props.ChangePage(this.props.index)} style={{color : newColor}}>{this.props.name}</a></li>
-)
+    return(
+        <li><Link to={this.props.route} /*onClick={() => this.props.ChangePage(this.props.index)}*/ style={{color : newColor}}>{this.props.name}</Link></li>
+    )
 }
 }
 
