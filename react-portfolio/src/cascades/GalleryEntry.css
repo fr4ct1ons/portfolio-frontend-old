@@ -1,0 +1,18 @@
+.GalleryEntry
+{
+    text-align: center;
+    background: rgb(50, 50, 50);
+    width: 25%;
+    display: inline-block;
+    word-wrap: break-word;
+    margin-bottom: 2%;
+    margin-left: 0.33%;
+    margin-right: 0.33%;
+    border-bottom: 2px solid red;
+
+}
+
+.GalleryEntry img
+{
+    width: 100%;
+}
