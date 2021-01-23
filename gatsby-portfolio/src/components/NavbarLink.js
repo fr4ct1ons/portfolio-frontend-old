@@ -24,7 +24,7 @@ render(){
 
 
     return(
-        <li><Link to={this.props.route} /*onClick={() => this.props.ChangePage(this.props.index)}*/ style={{color : newColor}}>{this.props.name}</Link></li>
+        <li><Link to={this.props.route} style={{color : newColor}}> {this.props.name} </Link></li>
     )
 }
 }
